@@ -1,6 +1,7 @@
 import React from 'react';
 import { FlatList, ActivityIndicator,Text, View,ImageBackground,TouchableWithoutFeedback } from 'react-native';
 import { NavigationActions, SafeAreaView } from 'react-navigation';
+import FastImage from 'react-native-fast-image';
 
 export default class SiteList extends React.Component{
         constructor(props) {
@@ -46,21 +47,13 @@ export default class SiteList extends React.Component{
             marginBottom: 5,
             marginTop: 5,
             }}>
-                <Text
-             style = {{
-                fontSize:28,
-                marginLeft: 10,
-                fontFamily:"SemiBold",
-                marginBottom: 2,
-                alignSelf:"center",
-                marginTop: 0
-
-             }}>SiteList</Text>
         <FlatList
         contentContainerStyle={{  paddingBottom: 5 }}
           data={this.state.dataSource}
+          
           onPress={()=>navigate('SiteDetail',{item})}
-          renderItem={({ item  }) => (
+          renderItem={({ item,   }) => (
+            
             <TouchableWithoutFeedback  onPress={()=>navigate('SiteDetail',{item})}>
             <ImageBackground source={{uri: item.image}}  style={{width:"100%", height:170,paddingBottom:2,paddingTop:2}}
             

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import {Text,View,Image, TextInput,StyleSheet} from 'react-native';
 import Icon from '@expo/vector-icons/AntDesign'
 
@@ -47,11 +48,12 @@ export default class SiteDetail extends React.Component{
             },
           });
         return(
+          
             <View   style = {{
                 marginTop:5,
                 fontSize:28,
                 marginBottom:0,
-                backgroundColor:"#ebf5e1",
+                backgroundColor:"#F5F5F5",
                 alignSelf:"center",
 
             }}>
@@ -62,7 +64,7 @@ export default class SiteDetail extends React.Component{
                 fontFamily:"SemiBold",
                 alignSelf:"center",
 
-            }}>Site Details</Text>
+            }}>Venue Details</Text>
             
             <View style={styles.container}>
                  <View style={styles.row}>
@@ -71,11 +73,14 @@ export default class SiteDetail extends React.Component{
                       </View>   
                       <View style={styles.column}>
                       <View style={styles.row}>
+                      <Icon name="right" color="#00716F" size={20}/>
                                      <Text
                                       style = {{
                                       fontSize:18,
                                       fontFamily:"SemiBold",
-                                      flexDirection: "column"
+                                      flexDirection: "column",
+                                      color:"#00716F",
+                                      textDecorationLine: 'underline'
                                      }}>Name:</Text>                
                 
                          </View>
@@ -83,8 +88,9 @@ export default class SiteDetail extends React.Component{
                                      <Text
                                       style = {{
                                       fontSize:18,
-                                      fontFamily:"Regular",
-                                      flexDirection: "column"
+                                      fontFamily:"SemiBold",
+                                      flexDirection: "column",
+                                      
                                       }}>{item.name}</Text>                
                 
                          </View>
@@ -98,11 +104,14 @@ export default class SiteDetail extends React.Component{
                 
                          </View>
                          <View style={styles.row}>
+                         <Icon name="infocirlceo" color="#00716F" size={20}/>
                                      <Text
                                       style = {{
                                       fontSize:18,
                                       fontFamily:"SemiBold",
-                                      flexDirection: "column"
+                                      flexDirection: "column",
+                                      color:"#00716F",
+                                      textDecorationLine: 'underline'
                                      }}>Main Contact:</Text>                
                 
                          </View>
@@ -110,7 +119,7 @@ export default class SiteDetail extends React.Component{
                                      <Text
                                       style = {{
                                       fontSize:18,
-                                      fontFamily:"Regular",
+                                      fontFamily:"SemiBold",
                                       alignSelf:"center",
                                       }}>{!(item.contacts && item.contacts[0] !== undefined)?"":item.contacts[0].name}</Text>                
                 
@@ -139,11 +148,14 @@ export default class SiteDetail extends React.Component{
                                       }}></Text>  
                     </View> 
                     <View style={styles.row}>
+                    <Icon name="home" color="#00716F" size={20}/>
                                      <Text
                                       style = {{
                                       fontSize:18,
                                       textAlign:"left",
                                       fontFamily:"SemiBold",
+                                      color:"#00716F",
+                                      textDecorationLine: 'underline'
                                       }}>Address:</Text>  
                     </View>   
                          
@@ -152,22 +164,25 @@ export default class SiteDetail extends React.Component{
                                       style = {{
                                       fontSize:18,
                                       textAlign:"left",
-                                      fontFamily:"Regular",
+                                      fontFamily:"SemiBold",
                                       }}>{item.address}</Text>  
                     </View>  
                     <View style={styles.row}>
                                      <Text
                                       style = {{
                                       fontSize:18,
-                                      fontFamily:"Regular",
+                                      fontFamily:"SemiBold",
                                       }}></Text>  
                     </View>  
                     <View style={styles.row}>
+                    <Icon name="phone" color="#00716F" size={20}/>
                                      <Text
                                       style = {{
                                       fontSize:18,
                                       textAlign:"left",
                                       fontFamily:"SemiBold",
+                                      color:"#00716F",
+                                      textDecorationLine: 'underline'
                                       }}>Phone:</Text>  
                     </View>       
                     
@@ -176,7 +191,7 @@ export default class SiteDetail extends React.Component{
                         <Text
                                       style = {{
                                       fontSize:18,
-                                      fontFamily:"Regular",
+                                      fontFamily:"SemiBold",
                                       
                                       }}>{item.contacts && item.contacts[0] !== undefined?item.contacts[0].phone:""}</Text> 
                                     
@@ -186,7 +201,7 @@ export default class SiteDetail extends React.Component{
                         <Text
                                       style = {{
                                       fontSize:18,
-                                      fontFamily:"Regular",
+                                      fontFamily:"SemiBold",
                                       
                                       }}>{item.contacts && item.contacts[0] !== undefined && item.contacts[0].phone? "        Phone":""}</Text> 
                                     
@@ -226,11 +241,14 @@ export default class SiteDetail extends React.Component{
                          </View>
                            
                     <View style={styles.row}>
+                    <Icon name="mail" color="#00716F" size={20}/>
                                      <Text
                                       style = {{
                                       fontSize:18,
                                       textAlign:"left",
                                       fontFamily:"SemiBold",
+                                      color:"#00716F",
+                                      textDecorationLine: 'underline'
                                       }}>Email:</Text>  
                     </View>    
                     <View style={styles.row}>
@@ -238,7 +256,7 @@ export default class SiteDetail extends React.Component{
                         <Text
                                       style = {{
                                       fontSize:18,
-                                      fontFamily:"Regular",
+                                      fontFamily:"SemiBold",
                                       
                                       }}>{item.contacts && item.contacts[0] !== undefined?item.contacts[0].email:""}</Text> 
                                     
@@ -248,7 +266,7 @@ export default class SiteDetail extends React.Component{
                         <Text
                                       style = {{
                                       fontSize:18,
-                                      fontFamily:"Regular",
+                                      fontFamily:"SemiBold",
                                       
                                       }}>{(item.contacts && item.contacts[0] !== undefined && item.contacts[0].phone !== undefined)?"        Work": ""}</Text> 
                                     
@@ -256,11 +274,15 @@ export default class SiteDetail extends React.Component{
                         </View>       
                          </View>
                          <View style={styles.row}>
+                         <Icon name="contacts" color="#00716F" size={20}/>
                                      <Text
                                       style = {{
                                       fontSize:18,
                                       textAlign:"left",
                                       fontFamily:"SemiBold",
+                                      
+                                      color:"#00716F",
+                                      textDecorationLine: 'underline'
                                       }}>Other Contacts:</Text>  
                     </View> 
                     <View style={styles.row}>
@@ -268,7 +290,7 @@ export default class SiteDetail extends React.Component{
                         <Text
                                       style = {{
                                       fontSize:18,
-                                      fontFamily:"Regular",
+                                      fontFamily:"SemiBold",
                                       
                                       }}>{item.contacts && item.contacts[1] !== undefined ?item.contacts[1].name:""}</Text> 
                                     
@@ -278,7 +300,7 @@ export default class SiteDetail extends React.Component{
                         <Text
                                       style = {{
                                       fontSize:18,
-                                      fontFamily:"Regular",
+                                      fontFamily:"SemiBold",
                                       
                                       }}>{item.contacts && item.contacts[1] !== undefined ?item.contacts[1].phone: ""}</Text> 
                                     
@@ -300,7 +322,7 @@ export default class SiteDetail extends React.Component{
                         <Text
                                       style = {{
                                       fontSize:18,
-                                      fontFamily:"Regular",
+                                      fontFamily:"SemiBold",
                                       
                                       }}>{item.contacts && item.contacts[2] !== undefined ?item.contacts[2].name:""}</Text> 
                                     
@@ -310,7 +332,7 @@ export default class SiteDetail extends React.Component{
                         <Text
                                       style = {{
                                       fontSize:18,
-                                      fontFamily:"Regular",
+                                      fontFamily:"SemiBold",
                                       
                                       }}>{item.contacts && item.contacts[2] !== undefined ?item.contacts[2].phone: ""}</Text> 
                                     

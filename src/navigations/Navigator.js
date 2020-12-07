@@ -6,11 +6,11 @@
     import SiteDetail from '../screens/SiteDetail';
 
     const stackNavigatorOptions = {
-        headerShown: false
+        headerShown: true
     }
     const AppNavigator = createStackNavigator(
         {
-            Login:{screen: Login},
+            Login:{screen: Login, },
             Register:{screen:Register},
             SiteList:{screen:SiteList},
             SiteDetail:{screen:SiteDetail}
@@ -19,4 +19,5 @@
             defaultNavigationOptions : stackNavigatorOptions
         }
     );
-export default createAppContainer(AppNavigator);
+    const AppContainer = createAppContainer(AppNavigator);
+export default createAppContainer(AppContainer);

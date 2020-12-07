@@ -26,7 +26,7 @@ export default class Login extends React.Component{
                 textAlign:"center"
 
             }}>
-               Welcome to your favorite Location List App!
+               Welcome to your favorite Venue List App!
             </Text>
                 <View style ={{flexDirection:"row",
                                 allignItem:"center",

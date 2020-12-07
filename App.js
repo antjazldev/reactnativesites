@@ -13,13 +13,19 @@ export default class App extends React.Component {
     await Font.loadAsync({
         'SemiBold' : require('./src/fonts/Montserrat-SemiBold.otf'),
         'Medium' : require('./src/fonts/Montserrat-Medium.otf'),
-        'Regular' : require('./src/fonts/Montserrat-Regular.otf')
+        'Regular' : require('./src/fonts/Montserrat-Regular.otf'),
     });
     this.setState({isFontLoaded:true})
 };
   render(){
     return (
-    (this.state.isFontLoaded === true)? ( <AppNavigator/>):(AppLoading)
+    (this.state.isFontLoaded === true)? ( 
+    
+    <AppNavigator/>
+      
+      )
+    
+    :(AppLoading)
   
   );
 }}
